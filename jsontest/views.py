@@ -26,7 +26,7 @@ def insert(request):
         received_json_data['id'] = ID   #将id字段加入到请求主体
 
         muser.save(received_json_data)  #将请求主体写入数据库
-        return HttpResponse('OK')
+        return HttpResponse(ID)
     return HttpResponse('it was GET request')
 
 def select(request):

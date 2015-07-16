@@ -36,7 +36,7 @@ def insert(request):
             muser.save(received_json_data)  #将请求主体写入数据库
             return HttpResponse(dataid)
         except StandardError, e:
-            return HttpResponse('StandardError:%s' % e)
+            return HttpResponse('StandardError:%s' % str(e))
 
     return HttpResponse('it was GET request')
 
@@ -78,7 +78,7 @@ def select(request):
                 return HttpResponse('None')
 
         except StandardError, e:
-            return HttpResponse('StandardError:%s' % e)
+            return HttpResponse('StandardError:%s' % str(e))
 
     return HttpResponse('it was GET request')
 
@@ -120,6 +120,6 @@ def update(request):
                 return HttpResponse('update false')
 
         except StandardError, e:
-            return HttpResponse('StandardError:%s' % e)
+            return HttpResponse('StandardError:%s' % str(e))
 
     return HttpResponse('it was GET request')

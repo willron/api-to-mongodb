@@ -1,6 +1,7 @@
 #coding:utf-8
 import json, pymongo, md5, time, re
 from django.shortcuts import HttpResponse
+# from bson.objectid import ObjectId
 
 #连接数据库
 con = pymongo.MongoClient('192.168.0.228', 27017)
@@ -63,11 +64,12 @@ def select(request):
             muser = eval(string)
 
             #搜索关键字,默认ID不显示.因为显示出来会面的json格式化函数
-            all1 = muser.find(received_json_data, projection={'_id': False})
+            all1 = muser.find(received_json_data)
 
             #搜索结果以列表形式展示
             list1 = []
             for i in all1:
+                i['_id'] = str(i['_id'])
                 list1.append(i)
 
             #判断搜索结果是否为空

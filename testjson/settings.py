@@ -71,44 +71,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'testjson.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'test',
-#         'USER': 'zhengxupeng',
-#         'PASSWORD': 'willron',
-#         'HOST':  '192.168.0.219',
-#         'PORT': '3306',
-#     }
-# }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': '',
-#         'NAME': '',
-#         'USER': '',
-#         'PASSWORD': '',
-#         'HOST':  '',
-#         'PORT': '',
-#     }
-# }
-# from mongoengine import connect
-# # connect('blog')
-# connect('ZhengXuPengTest', host='192.168.0.228')
-
-
-# Internationalization
-# https://docs.djangoproject.com/en/1.8/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
